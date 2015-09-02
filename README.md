@@ -1,5 +1,8 @@
 # JSON API Validator
 
+[![Build Status](https://travis-ci.org/elliotttf/jsonapi-validator.svg?branch=master)](https://travis-ci.org/elliotttf/jsonapi-validator)
+[![Coverage Status](https://coveralls.io/repos/elliotttf/jsonapi-validator/badge.svg?branch=master&service=github)](https://coveralls.io/github/elliotttf/jsonapi-validator?branch=master)
+
 Validates a JavaScript object as JSON API compliant.
 
 ## Usage
