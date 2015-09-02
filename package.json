@@ -1,0 +1,42 @@
+{
+  "name": "jsonapi-validator",
+  "version": "1.0.0",
+  "description": "JSON API validation module.",
+  "main": "lib/validator.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliotttf/jsonapi-validator.git"
+  },
+  "keywords": [
+    "json",
+    "api",
+    "validation"
+  ],
+  "author": "Elliott Foster <elliottf@codebrews.com> (http://codebrews.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elliotttf/jsonapi-validator/issues"
+  },
+  "homepage": "https://github.com/elliotttf/jsonapi-validator#readme",
+  "devDependencies": {
+    "ghooks": "^0.3.2",
+    "gulp": "^3.8.8",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-eslint": "^1.0.0",
+    "gulp-istanbul": "^0.8.1",
+    "gulp-nodeunit": "0.0.5",
+    "nodeunit": "^0.9.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "gulp lint",
+      "pre-push": "gulp test"
+    }
+  },
+  "dependencies": {
+    "is-my-json-valid": "^2.12.2"
+  }
+}
