@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/elliotttf/jsonapi-validator#readme",
   "devDependencies": {
-    "ghooks": "^0.3.2",
-    "gulp": "^3.8.8",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-eslint": "^1.0.0",
-    "gulp-istanbul": "^0.8.1",
+    "ghooks": "0.3.2",
+    "gulp": "3.9.0",
+    "gulp-coveralls": "0.1.4",
+    "gulp-eslint": "1.0.0",
+    "gulp-istanbul": "0.8.1",
     "gulp-nodeunit": "0.0.5",
-    "nodeunit": "^0.9.0"
+    "nodeunit": "0.9.1"
   },
   "config": {
     "ghooks": {
@@ -37,6 +37,6 @@
     }
   },
   "dependencies": {
-    "is-my-json-valid": "^2.12.2"
+    "is-my-json-valid": "2.12.2"
   }
 }
