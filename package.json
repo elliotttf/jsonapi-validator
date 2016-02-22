@@ -37,6 +37,6 @@
     }
   },
   "dependencies": {
-    "is-my-json-valid": "2.12.2"
+    "is-my-json-valid": "2.13.1"
   }
 }
