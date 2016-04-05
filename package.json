@@ -26,7 +26,7 @@
     "gulp": "3.9.0",
     "gulp-coveralls": "0.1.4",
     "gulp-eslint": "1.0.0",
-    "gulp-istanbul": "0.8.1",
+    "gulp-istanbul": "0.10.4",
     "gulp-nodeunit": "0.0.5",
     "nodeunit": "0.9.1"
   },
