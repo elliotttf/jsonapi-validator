@@ -4,7 +4,10 @@
   "description": "JSON API validation module.",
   "main": "lib/validator.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "istanbul cover --print both nodeunit ./test",
+    "lint": "eslint .",
+    "coverage": "istanbul check-coverage --statements 100 --lines 100 --branches 100 --functions 100",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -22,21 +25,24 @@
   },
   "homepage": "https://github.com/elliotttf/jsonapi-validator#readme",
   "devDependencies": {
+    "coveralls": "^2.11.9",
+    "eslint": "^2.13.1",
     "ghooks": "^0.3.2",
     "gulp": "^3.8.8",
     "gulp-coveralls": "^0.1.4",
     "gulp-eslint": "^1.0.0",
     "gulp-istanbul": "^0.8.1",
     "gulp-nodeunit": "0.0.5",
-    "nodeunit": "^0.9.0"
+    "istanbul": "^0.4.4",
+    "nodeunit": "^0.9.1"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "gulp lint",
-      "pre-push": "gulp test"
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
     }
   },
   "dependencies": {
-    "is-my-json-valid": "^2.12.2"
+    "ajv": "^4.1.3"
   }
 }
