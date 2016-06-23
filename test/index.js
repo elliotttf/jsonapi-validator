@@ -30,7 +30,7 @@ module.exports = {
       try {
         this.validator.validate({});
       } catch (e) {
-        test.equal(e.errors[0].field, 'data', 'Unexpected error reported.');
+        test.equal(e.errors[0].message, 'should have required property \'data\'', 'Unexpected error reported.');
       }
 
       test.done();
@@ -53,11 +53,10 @@ module.exports = {
 
     // NOTE: not valid JSON API, but a valid JSON schema.
     var validator = new Validator({
-      required: true,
       type: 'object',
+      required: ['hello'],
       properties: {
         hello: {
-          required: true,
           type: 'string'
         }
       }
