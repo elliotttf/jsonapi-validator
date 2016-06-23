@@ -27,12 +27,7 @@
   "devDependencies": {
     "coveralls": "^2.11.9",
     "eslint": "^2.13.1",
-    "ghooks": "^0.3.2",
-    "gulp": "^3.8.8",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-eslint": "^1.0.0",
-    "gulp-istanbul": "^0.8.1",
-    "gulp-nodeunit": "0.0.5",
+    "ghooks": "^1.2.4",
     "istanbul": "^0.4.4",
     "nodeunit": "^0.9.1"
   },
