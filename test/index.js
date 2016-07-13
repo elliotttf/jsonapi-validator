@@ -1,3 +1,4 @@
+var spawn = require('child_process').spawn;
 var Validator = require('../').Validator;
 
 module.exports = {
