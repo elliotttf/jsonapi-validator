@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "JSON API validation module.",
   "main": "lib/validator.js",
+  "bin": {
+    "jsonapi-validator": "./bin/jsonapi-validator.js"
+  },
   "scripts": {
     "test": "istanbul cover --print both nodeunit ./test",
     "lint": "eslint .",
@@ -38,6 +41,7 @@
     }
   },
   "dependencies": {
-    "ajv": "^4.1.3"
+    "ajv": "^4.1.3",
+    "yargs": "4.8.0"
   }
 }

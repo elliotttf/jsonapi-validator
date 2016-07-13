@@ -33,3 +33,16 @@ JSON API schema.
 ```
 var customValidator = new Validator(require('./my-schema.json'));
 ```
+
+## Command Line Utility
+
+JSON API Validator can also be used on the command line by first running `npm i -g jsonapi-validator`, then executing the command line tool as follows:
+
+```
+jsonapi-validator -f /path/to/file.json
+```
+
+If the file is valid JSON API the tool will report it as such and exit with code 0.
+If the file is invalid JSON API the problems will be logged to the console and the
+tool will exit with code 1.
+
