@@ -111,6 +111,10 @@
             "$ref": "#/definitions/resource"
           },
           "uniqueItems": true
+        },
+        {
+          "description": "null if the request is one that might correspond to a single resource, but doesn't currently.",
+          "type": "null"
         }
       ]
     },
@@ -221,6 +225,11 @@
               "$ref": "#/definitions/meta"
             }
           },
+          "anyOf": [
+            {"required": ["data"]},
+            {"required": ["meta"]},
+            {"required": ["links"]}
+          ],
           "additionalProperties": false
         }
       },
@@ -247,9 +256,7 @@
     },
     "empty": {
       "description": "Describes an empty to-one relationship.",
-      "type": ["object", "null"],
-      "properties": {},
-      "additionalProperties": false
+      "type": "null"
     },
     "linkage": {
       "description": "The \"type\" and \"id\" to non-empty members.",
