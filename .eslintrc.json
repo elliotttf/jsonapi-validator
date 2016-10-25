@@ -1,0 +1,28 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "script"
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "brace-style": ["error", "stroustrup"],
+    "max-len": ["warn", {
+      "code": 100,
+      "comments": 80,
+      "ignoreUrls": true,
+      "ignorePattern": "(logger\\.|new Error\\)|new TypeError\\()",
+      "ignoreTrailingComments": true,
+      "tabWidth": 2
+    }],
+    "no-warning-comments": "warn",
+    "quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+    "require-jsdoc": ["error", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true
+      }
+    }],
+    "valid-jsdoc": "error"
+  }
+}
