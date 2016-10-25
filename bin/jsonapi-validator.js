@@ -1,10 +1,14 @@
 #! /usr/bin/env node
 
-var fs = require('fs');
-var path = require('path');
-var Validator = require('../').Validator;
+/* eslint-disable no-console */
 
-var argv = require('yargs')
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const Validator = require('../').Validator;
+
+const argv = require('yargs')
   .usage('Usage: $0 -f [file] [-q]')
   .demand(['f'])
   .alias('f', 'file')
@@ -17,30 +21,27 @@ var argv = require('yargs')
   .alias('h', 'help')
   .argv;
 
-var v = new Validator();
-var file = require(path.resolve(argv.f));
+const v = new Validator();
 
 try {
+  const file = JSON.parse(fs.readFileSync(path.resolve(argv.f)));
   v.validate(file);
 }
 catch (e) {
   if (!argv.q) {
     console.error(e.message);
-    e.errors.forEach(function (message) {
-      console.error('  ' + message.message + '.');
-      console.error('  schemaPath: ' + message.schemaPath);
-      for (param in message.params) {
-        if (!message.params.hasOwnProperty(param)) {
-          return;
-        }
-        console.error('  ' + param + ': ' + message.params[param]);
-      }
+    e.errors.forEach((message) => {
+      console.error(`  ${message.message}.`);
+      console.error(`  schemaPath: ${message.schemaPath}`);
+      Object.keys(message.params).forEach(param => console.error(
+        `  ${param}: ${message.params[param]}`
+      ));
     });
   }
   process.exit(1);
 }
 
 if (!argv.q) {
-  console.log(argv.f + ' is valid JSON API.');
+  console.log(`${argv.f} is valid JSON API.`);
 }
 
