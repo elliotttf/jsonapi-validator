@@ -36,8 +36,7 @@ module.exports = {
         test.equal(
           e.errors[0].message,
           'should have required property \'data\'',
-          'Unexpected error reported.'
-        );
+          'Unexpected error reported.');
       }
 
       test.done();
