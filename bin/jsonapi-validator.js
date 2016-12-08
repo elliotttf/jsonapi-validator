@@ -34,8 +34,7 @@ catch (e) {
       console.error(`  ${message.message}.`);
       console.error(`  schemaPath: ${message.schemaPath}`);
       Object.keys(message.params).forEach(param => console.error(
-        `  ${param}: ${message.params[param]}`
-      ));
+        `  ${param}: ${message.params[param]}`));
     });
   }
   process.exit(1);
