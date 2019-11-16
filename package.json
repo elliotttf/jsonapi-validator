@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "ajv": "^5.2.2",
-    "yargs": "^9.0.1"
+    "yargs": "^15.0.1"
   },
   "engines": {
     "node": ">=6"
